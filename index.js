@@ -79,8 +79,6 @@ for (i = 0; i < studentsArray.length; i++) {
     filteredNames = studentsArray.filter((score) => score > highScore)
 };
 
-
-
 console.log(filteredNames);
 
 
