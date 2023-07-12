@@ -69,17 +69,22 @@ const studentsArray = [
 ];
 
 let highScore = 0;
+let lowScore = 0;
 let nameHighScore = '';
-let filteredNames = [];
+let highScoresNames = [];
 
 for (i = 0; i < studentsArray.length; i++) {
     if (studentsArray[i].score > highScore) {
         highScore = studentsArray[i].score
+    } else if (studentsArray[i].score < highScore) {
+
     }
-    filteredNames = studentsArray.filter((score) => score > highScore)
+    highScoresNames = studentsArray.filter((student) => student.score === highScore)
 };
 
-console.log(filteredNames);
+highScoresNames.map((student) => {
+    console.log(student.name, student.score)
+})
 
 
 
