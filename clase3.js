@@ -14,6 +14,10 @@ const studentsArray = [
         score: 10,
     },
     {
+        name: "Lucía",
+        score: 5,
+    },
+    {
         name: "Juana",
         score: 9,
     },
@@ -23,18 +27,25 @@ const studentsArray = [
     },
 ];
 
-let highScore = 0;
-let lowScore = 0;
-let nameHighScore = '';
-let highScoresNames = [];
+let highestScores = [];
+let lowestScores = []
 
-for (i = 0; i < studentsArray.length; i++) {
-    if (studentsArray[i].score > highScore) {
-        highScore = studentsArray[i].score
-    }
-    highScoresNames = studentsArray.filter((student) => student.score === highScore)
-};
+const high = studentsArray.reduce((previous, current) => {
+    return current.score > previous.score ? current : previous;
+});
 
-highScoresNames.map((student) => {
+const low = studentsArray.reduce((previous, current) => {
+    return current.score < previous.score ? current : previous;
+});
+
+highestScores = studentsArray.filter((student) => student.score === high.score)
+
+lowestScores = studentsArray.filter((student) => student.score === low.score)
+
+highestScores.map((student) => {
+    console.log(student.name, student.score)
+})
+
+lowestScores.map((student) => {
     console.log(student.name, student.score)
 })
