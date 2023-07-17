@@ -1,4 +1,4 @@
-//Array de alumnos, buscar el que tiene mayor nota
+//Array de alumnos, buscar los que tienen mayor nota y menor nota
 
 const studentsArray = [
     {
@@ -43,9 +43,27 @@ highestScores = studentsArray.filter((student) => student.score === high.score)
 lowestScores = studentsArray.filter((student) => student.score === low.score)
 
 highestScores.map((student) => {
-    console.log(student.name, student.score)
+    //console.log(student.name, student.score)
 })
 
 lowestScores.map((student) => {
-    console.log(student.name, student.score)
+    //console.log(student.name, student.score)
 })
+
+//Ordenar el siguiente array sin usar sort
+
+let arr = [3, 23, 11, 15, 6, 19, 32, 9];
+let arrCopy = [...arr];
+let indexOfLowest = 0;
+arr = [];
+
+for (let i=0; arrCopy.length > 0; i++) {
+    let lowestNumber = arrCopy.reduce((previous, current) => {
+        return current < previous? current : previous;
+    });
+    arr.push(lowestNumber)
+    indexOfLowest = arrCopy.indexOf(lowestNumber)
+    arrCopy.splice(indexOfLowest, 1)
+}
+
+console.log(arr)
