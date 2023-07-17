@@ -1,4 +1,4 @@
-//Array de alumnos, buscar los que tienen mayor nota y menor nota
+//Ejercicio 1: Array de alumnos, buscar los que tienen mayor nota y menor nota
 
 const studentsArray = [
     {
@@ -50,7 +50,7 @@ lowestScores.map((student) => {
     //console.log(student.name, student.score)
 })
 
-//Ordenar el siguiente array sin usar sort
+//Ejercicio 2: Ordenar el siguiente array sin usar sort
 
 let arr = [3, 23, 11, 15, 6, 19, 32, 9];
 let arrCopy = [...arr];
@@ -66,4 +66,19 @@ for (let i=0; arrCopy.length > 0; i++) {
     arrCopy.splice(indexOfLowest, 1)
 }
 
-console.log(arr)
+//console.log(arr)
+
+//Ejercicio 3: Dado el siguiente string, obtener las letras que estén en mayúscula: 
+
+let string = "LaCrOmbiNeTa";
+let upperCases = "";
+
+for (i=0; i < string.length; i++) {
+    let character = string[i];
+    if (character === character.toUpperCase() && character !== character.toLowerCase()) {
+        upperCases += character
+    }
+}
+
+console.log(upperCases)
+
