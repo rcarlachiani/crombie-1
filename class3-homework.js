@@ -19,10 +19,8 @@ const arr = [2, 5, 45, 6, 9];
 
 const multiply5 = (array) => {
     console.log('<<< Ejercicio 2 >>>')
-    const newArray = [];
-
-    array.map((item) => {
-        newArray.push(item*=5);
+    const newArray = array.map((item) => {
+        return (item*=5);
     });
 
     console.log(newArray);
