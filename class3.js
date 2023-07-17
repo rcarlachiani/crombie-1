@@ -42,12 +42,14 @@ highestScores = studentsArray.filter((student) => student.score === high.score)
 
 lowestScores = studentsArray.filter((student) => student.score === low.score)
 
+console.log('<<< Ejercico 1 >>>')
+
 highestScores.map((student) => {
-    //console.log(student.name, student.score)
+    console.log(student.name, student.score)
 })
 
 lowestScores.map((student) => {
-    //console.log(student.name, student.score)
+    console.log(student.name, student.score)
 })
 
 //Ejercicio 2: Ordenar el siguiente array sin usar sort
@@ -66,7 +68,8 @@ for (let i=0; arrCopy.length > 0; i++) {
     arrCopy.splice(indexOfLowest, 1)
 }
 
-//console.log(arr)
+console.log('<<< Ejercicio 2 >>>')
+console.log(arr)
 
 //Ejercicio 3: Dado el siguiente string, obtener las letras que estén en mayúscula: 
 
@@ -80,4 +83,5 @@ for (i=0; i < string.length; i++) {
     }
 }
 
-//console.log(upperCases)
+console.log('<<< Ejercicio 3 >>>')
+console.log(upperCases)
