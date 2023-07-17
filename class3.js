@@ -80,5 +80,4 @@ for (i=0; i < string.length; i++) {
     }
 }
 
-console.log(upperCases)
-
+//console.log(upperCases)
