@@ -56,7 +56,7 @@ const strings = ['¿Acaso hubo buhos aca?', 'Crombie', 'Somos o no somos', 'Luz 
 const isPalindrome = (inputString) => {
     console.log('<<< Ejercicio 4 >>>');
 
-    inputString.map((string) => {
+    inputString.forEach((string) => {
         let noSpacesString = string.replace(/[^A-Z0-9]+/ig, '').toLowerCase();
         let splitString = noSpacesString.split("");
         let reversedArray = splitString.reverse();
