@@ -73,3 +73,21 @@ const isPalindrome = (inputString) => {
 };
 
 isPalindrome(strings);
+
+//Ejercicio 5: 
+
+const formValidator = (email, password, description) => {
+    console.log('<<< Ejercicio 5 >>>')
+
+    if (!email.includes("@") || !email.includes(".com")) {
+      return console.log("Error: Email must contain '@' and '.com'");
+    } else if (password.length < 8 || password.length > 16 || password === password.toLowerCase()) {
+      return console.log("Error: Password must be between 8 and 16 characters and contain at least one uppercase letter");
+    } else if (description.length > 400 || description.includes("-")) {
+      return console.log("Error: Description cannot contain '-' and must be up to 400 characters");
+    }
+  
+    console.log("You're succesfully registered");
+}
+  
+formValidator("rcarlachiani@gmail.com", "contraseñA1", "Descprición de hasta 400 caracteres");
