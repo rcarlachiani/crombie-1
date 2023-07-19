@@ -76,31 +76,33 @@ const sumMinMaxAverage = (products) => {
     console.log('<<< Ejercicio 1.4 >>>')
 
     //All prices
-    const prices = [];
+    //const prices = [];
 
     //Total prices
     let totalPrices = 0;
 
     products.forEach((product) => {
         totalPrices = totalPrices+=product.price;
-        prices.push(product.price)
+        //prices.push(product.price)
     })
 
     //Average of all product prices
     const average = totalPrices / products.length;
 
     //Min and max price
-    const highest = prices.reduce((previous, current) => {
-        return current > previous ? current : previous;
+    const highest = products.reduce((previous, current) => {
+        return current.price > previous.price ? current : previous; 
+        //Daba type error porque anteriormente yo retornaba currnt.price o previous.price en lugar del objeto entero para comparar con el sigueinte
     });
+
     
-    const lowest = prices.reduce((previous, current) => {
-        return current < previous ? current : previous;
+    const lowest = products.reduce((previous, current) => {
+        return current.price < previous.price ? current : previous;
     });
 
     console.log('La suma total de los precios de los productos es:', totalPrices)
     console.log('El promedio de los precios de los productos es:', average)
-    console.log('El precio mínimo es:', lowest, 'y el máximo es:', highest)
+    console.log('El precio mínimo es:', lowest.price, 'y el precio máximo es:', highest.price)
 }
 
 sumMinMaxAverage(products);
