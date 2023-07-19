@@ -75,15 +75,11 @@ changeBrand('ChangoMas');
 const sumMinMaxAverage = (products) => {
     console.log('<<< Ejercicio 1.4 >>>')
 
-    //All prices
-    //const prices = [];
-
     //Total prices
     let totalPrices = 0;
 
     products.forEach((product) => {
         totalPrices = totalPrices+=product.price;
-        //prices.push(product.price)
     })
 
     //Average of all product prices
@@ -94,7 +90,6 @@ const sumMinMaxAverage = (products) => {
         return current.price > previous.price ? current : previous; 
         //Daba type error porque anteriormente yo retornaba currnt.price o previous.price en lugar del objeto entero para comparar con el sigueinte
     });
-
     
     const lowest = products.reduce((previous, current) => {
         return current.price < previous.price ? current : previous;
